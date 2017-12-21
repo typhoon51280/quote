@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,9 +15,12 @@ public class Quote implements Serializable {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private Long id;
+	
+	@Column(name="QUOTE")
 	private String quote;
+	
+	@Column(name="AUTHOR")
 	private String author;
 	
 	public Long getId() {
